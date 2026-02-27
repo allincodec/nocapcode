@@ -3,8 +3,23 @@ package org.allincodec.java.queue;
 import java.util.*;
 
 /**
- * We have list [2,3,4,1,4,5,5]
- * output [1,2,3,4,4,5,5]
+ * Given a list of integers, sort them by frequency (ascending).
+ * If two elements have the same frequency, sort by value (ascending).
+ *
+ * <p>Approach:</p>
+ * <ol>
+ *   <li>Count frequency of each element using a HashMap</li>
+ *   <li>Use a min PriorityQueue ordered by frequency, then by value for ties</li>
+ *   <li>Poll each entry and add the element repeated by its frequency to result</li>
+ * </ol>
+ *
+ * <pre>
+ * Input:  [2, 3, 4, 1, 4, 5, 5]
+ * Output: [1, 2, 3, 4, 4, 5, 5]
+ * </pre>
+ *
+ * Time Complexity: O(N log N) — heap operations
+ * Space Complexity: O(N) — frequency map and heap
  */
 public class FrequencyCount {
 

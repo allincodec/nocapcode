@@ -14,13 +14,13 @@ public class DirectedGraphMain {
         dg.addEdge(1, 5);
         dg.addEdge(3, 2);
 
-        BFS bfs = new BFS();
+        BFS bfs = new BFS(dg);
 
         System.out.println(">> Adjacency List of the Graph <<");
         dg.printGraph();
         System.out.println();
 
-        bfs.breadthFirstTraversal(dg, 0);
+        bfs.breadthFirstTraversal(0);
 
         DFS dfs = new DFS();
         System.out.print("DFS Traversal: ");
