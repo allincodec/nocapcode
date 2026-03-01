@@ -9,14 +9,6 @@ public class DoublyLinkedList<T> {
     public DoublyLinkedList() {
     }
 
-    public void setHead(Node head) {
-        this.head = head;
-    }
-
-    public void setTail(Node tail) {
-        this.tail = tail;
-    }
-
     public Node head() {
         return head;
     }
@@ -30,7 +22,7 @@ public class DoublyLinkedList<T> {
     }
 
     public class Node {
-        private T data;
+        private final T data;
         private Node prevNode;
         private Node nextNode;
 
